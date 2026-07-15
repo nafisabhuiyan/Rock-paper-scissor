@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0; /* element er gap remove kore */
+    text-align: center;
+}
+
+h1{
+    color: black;
+    height: 5rem; 
+    font-size: 4rem;
+    font-style: italic;
+}
+
+.choice{
+    height: 200px;
+    width: 200px;
+}
+
+img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+
+img:hover{
+    cursor: pointer;
+    transform: translateY(-15px) scale(1.05);
+    filter: drop-shadow(0 15px 10px rgba(0, 0, 0, 0.3));
+}
+
+/*  transition: all 0.3s ease-in-out;: এটি ইমেজের নরমাল স্টেট এবং হোভার স্টেটের মধ্যে একটি মসৃণ পরিবর্তন তৈরি করে। 
+এটি না দিলে ছবি হুট করে লাফ দিয়ে উপরে উঠে যাবে।
+transform: translateY(-15px): translateY মানে লম্বালম্বি অক্ষ। মাইনাস (-) মান দিলে এলিমেন্ট উপরের দিকে যায়।
+scale(1.05): এটি ছবিকে ৫% বড় করে দেখাবে, যা ইন্টারঅ্যাক্টিভ অনুভূতি দেয়।
+filter: drop-shadow(...): যেহেতু ছবি উপরে উঠছে, তাই নিচে একটি ছায়া (shadow) থাকলে এটি দেখতে অনেক বাস্তবসম্মত লাগে। */
+
+.choices{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 5rem;
+}
+
+.score-board{
+    color: blue;
+    display: flex;
+    gap: 12rem;
+    justify-content: center;
+    margin-top: 6rem;
+    font-size: 2rem;   
+}
+
+#user,#computer{
+    font-size: 4rem;
+}
+
+.msg-container{
+    margin-top: 5rem;
+}
+
+#msg{
+    color: white;
+    background-color: black;
+    line-height: 3rem;
+    font-size: 2rem;
+    display: inline; /* block black er jnno*/
+    padding: 1rem; /* box boro krar jnno */
+    border-radius: 1rem; /* curve krar jnno */
+}
+
